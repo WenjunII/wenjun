@@ -49,8 +49,8 @@
 
   .home-item { aspect-ratio: auto; }
   .home-item__info { padding: var(--space-4) 0 !important; }
-  .home-item__title { font-size: var(--text-xl) !important; }
-  .home-item__title-cn { font-size: var(--text-md) !important; }
+  .home-item__title { font-size: var(--text-lg) !important; }
+  .home-item__title-cn { font-size: var(--text-sm) !important; }
   .home-item__meta { font-size: var(--text-xs) !important; }
 
   .info-entry {
