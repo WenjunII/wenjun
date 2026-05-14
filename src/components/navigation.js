@@ -83,17 +83,26 @@ export function renderNavigation() {
   return sidebar;
 }
 
-export function renderMenuToggle() {
-  const btn = document.createElement('button');
-  btn.className = 'menu-toggle';
-  btn.id = 'menu-toggle';
-  btn.setAttribute('aria-label', 'Toggle menu');
-  btn.innerHTML = `
-    <span class="menu-toggle__bar"></span>
-    <span class="menu-toggle__bar"></span>
-    <span class="menu-toggle__bar"></span>
+export function renderMobileHeader() {
+  const header = document.createElement('div');
+  header.className = 'mobile-header';
+  header.id = 'mobile-header';
+
+  header.innerHTML = `
+    <div class="mobile-header__brand">
+      <a href="#/">
+        ${siteInfo.name.en}
+        <span class="mobile-header__brand-cn">${siteInfo.name.cn}</span>
+      </a>
+    </div>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+      <span class="menu-toggle__bar"></span>
+      <span class="menu-toggle__bar"></span>
+      <span class="menu-toggle__bar"></span>
+    </button>
   `;
 
+  const btn = header.querySelector('#menu-toggle');
   btn.addEventListener('click', () => {
     const sidebar = document.getElementById('sidebar');
     const overlay = document.getElementById('sidebar-overlay');
@@ -108,7 +117,7 @@ export function renderMenuToggle() {
     }
   });
 
-  return btn;
+  return header;
 }
 
 export function renderOverlay() {

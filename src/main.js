@@ -8,7 +8,7 @@ import './styles/pages.css';
 import './styles/responsive.css';
 
 import { Router } from './router.js';
-import { renderNavigation, renderMenuToggle, renderOverlay, updateActiveNav, closeMobileMenu } from './components/navigation.js';
+import { renderNavigation, renderMobileHeader, renderOverlay, updateActiveNav, closeMobileMenu } from './components/navigation.js';
 import { renderHomePage } from './pages/home.js';
 import { renderWorkDetail } from './pages/work-detail.js';
 import { renderBookDetail } from './pages/book-detail.js';
@@ -23,14 +23,14 @@ function init() {
   document.title = siteInfo.title;
 
   // Render navigation
-  const menuToggle = renderMenuToggle();
+  const mobileHeader = renderMobileHeader();
   const overlay = renderOverlay();
   const sidebar = renderNavigation();
   const main = document.createElement('main');
   main.className = 'main-content';
   main.id = 'main-content';
 
-  app.appendChild(menuToggle);
+  app.appendChild(mobileHeader);
   app.appendChild(overlay);
   app.appendChild(sidebar);
   app.appendChild(main);
