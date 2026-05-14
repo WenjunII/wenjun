@@ -531,6 +531,35 @@
   position: fixed;
 }
 
+/* Zoomed mode (tap to toggle) */
+.lightbox--zoomed {
+  overflow: auto;
+  display: block;
+  cursor: zoom-out;
+}
+
+.lightbox--zoomed .lightbox__image {
+  width: 200vw; /* Zoom in to 2x width */
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  cursor: zoom-out;
+}
+
+.lightbox--zoomed .lightbox__close,
+.lightbox--zoomed .lightbox__nav,
+.lightbox--zoomed .lightbox__counter {
+  position: fixed;
+}
+
+.lightbox--zoomed .lightbox__nav {
+  top: 50vh;
+}
+
+.lightbox:not(.lightbox--zoomed) .lightbox__image {
+  cursor: zoom-in;
+}
+
 /* --- Info Page --- */
 .info-bio {
   max-width: 800px;

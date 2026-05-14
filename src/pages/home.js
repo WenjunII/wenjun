@@ -34,10 +34,10 @@ export function renderHomePage(container) {
              </div>`
         }
       </div>
-      <div class="home-item__info" style="margin-top: 1.5rem; text-align: left;">
-        <div class="home-item__title" style="font-size: 1.25rem; font-weight: 500; margin-bottom: 0.25rem;">${work.title.en}</div>
-        ${work.title.cn ? `<div class="home-item__title-cn" style="font-size: 1.1rem; color: var(--color-text-dim); margin-bottom: 0.5rem;">${work.title.cn}</div>` : ''}
-        <div class="home-item__meta" style="font-size: 0.9rem; color: var(--color-text-dim); letter-spacing: 0.05em;">${work.year} · ${work.medium}</div>
+      <div class="home-item__info" style="margin-top: 2rem; text-align: left; padding-bottom: 2rem;">
+        <div class="home-item__title" style="font-size: 1.5rem; font-weight: 500; margin-bottom: 0.5rem; color: var(--color-text);">${work.title.en}</div>
+        ${work.title.cn ? `<div class="home-item__title-cn" style="font-size: 1.25rem; color: var(--color-text); margin-bottom: 0.75rem;">${work.title.cn}</div>` : ''}
+        <div class="home-item__meta" style="font-size: 1rem; color: var(--color-text-dim); letter-spacing: 0.03em; text-transform: uppercase;">${work.year} · ${work.medium}</div>
       </div>
     </a>
   `;

@@ -21,9 +21,21 @@ function ensureLightbox() {
   `;
   document.body.appendChild(lightboxEl);
 
+  const img = lightboxEl.querySelector('#lightbox-image');
+  img.addEventListener('click', (e) => {
+    e.stopPropagation(); // Don't close lightbox when clicking image
+    lightboxEl.classList.toggle('lightbox--zoomed');
+  });
+
   lightboxEl.querySelector('#lightbox-close').addEventListener('click', closeLightbox);
-  lightboxEl.querySelector('#lightbox-prev').addEventListener('click', () => navigateLightbox(-1));
-  lightboxEl.querySelector('#lightbox-next').addEventListener('click', () => navigateLightbox(1));
+  lightboxEl.querySelector('#lightbox-prev').addEventListener('click', (e) => {
+    e.stopPropagation();
+    navigateLightbox(-1);
+  });
+  lightboxEl.querySelector('#lightbox-next').addEventListener('click', (e) => {
+    e.stopPropagation();
+    navigateLightbox(1);
+  });
   lightboxEl.addEventListener('click', (e) => {
     if (e.target === lightboxEl || e.target.classList.contains('lightbox__scroll-area')) closeLightbox();
   });
