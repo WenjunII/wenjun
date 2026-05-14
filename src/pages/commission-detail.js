@@ -57,7 +57,7 @@ export function renderCommissionDetail(container, params) {
       if (typeof img === 'string') return `commission/${comm.id}/${img}`;
       return { ...img, file: `commission/${comm.id}/${img.file}` };
     });
-    const gallery = renderGallery(galleryItems, '/images/', { fullResolution: comm.fullResolution });
+    const gallery = renderGallery(galleryItems, 'images/', { fullResolution: comm.fullResolution });
     page.appendChild(gallery);
   }
 

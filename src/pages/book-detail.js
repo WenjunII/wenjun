@@ -63,7 +63,7 @@ export function renderBookDetail(container, params) {
       if (typeof img === 'string') return `books/${book.id}/${img}`;
       return { ...img, file: `books/${book.id}/${img.file}` };
     });
-    const gallery = renderGallery(galleryItems, '/images/', { fullResolution: book.fullResolution });
+    const gallery = renderGallery(galleryItems, 'images/', { fullResolution: book.fullResolution });
     page.appendChild(gallery);
   }
 

@@ -83,7 +83,7 @@ export function renderWorkDetail(container, params) {
       }
       return { ...img, file: `works/${work.id}/${img.file}` };
     });
-    const gallery = renderGallery(galleryItems, '/images/', { fullResolution: work.fullResolution });
+    const gallery = renderGallery(galleryItems, 'images/', { fullResolution: work.fullResolution });
     page.appendChild(gallery);
   }
 

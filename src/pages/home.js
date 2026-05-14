@@ -27,7 +27,7 @@ export function renderHomePage(container) {
   html += `
     <a href="#/works/${work.id}" class="home-item home-item--centered animate-fade-in-up" id="home-${work.id}" style="width: 100%;">
       ${thumbFile
-        ? `<img class="home-item__image" src="/images/works/${work.id}/${thumbFile}" alt="${work.title.en}" loading="lazy" />`
+        ? `<img class="home-item__image" src="images/works/${work.id}/${thumbFile}" alt="${work.title.en}" loading="lazy" />`
         : `<div class="home-item__placeholder">
              <span class="home-item__placeholder-text">${work.title.en}</span>
            </div>`
