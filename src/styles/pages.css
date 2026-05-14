@@ -97,15 +97,34 @@
 .home-item--centered {
   aspect-ratio: auto;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   background: transparent;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.home-item--centered .home-item__image-container {
+  width: 100%;
+  overflow: hidden;
 }
 
 .home-item--centered .home-item__image {
   width: 100%;
-  max-width: none;
   height: auto;
   object-fit: contain;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.home-item--centered:hover .home-item__image {
+  transform: scale(1.02);
+}
+
+.home-item--centered .home-item__info {
+  width: 100%;
+  padding: 1.5rem 0;
 }
 
 /* Placeholder for items without images */

@@ -26,16 +26,18 @@ export function renderHomePage(container) {
   
   html += `
     <a href="#/works/${work.id}" class="home-item home-item--centered animate-fade-in-up" id="home-${work.id}" style="width: 100%;">
-      ${thumbFile
-        ? `<img class="home-item__image" src="images/works/${work.id}/${thumbFile}" alt="${work.title.en}" loading="lazy" />`
-        : `<div class="home-item__placeholder">
-             <span class="home-item__placeholder-text">${work.title.en}</span>
-           </div>`
-      }
-      <div class="home-item__overlay" style="opacity: 1; background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 100%);">
-        <div class="home-item__title">${work.title.en}</div>
-        ${work.title.cn ? `<div class="home-item__title-cn">${work.title.cn}</div>` : ''}
-        <div class="home-item__meta">${work.year} · ${work.medium}</div>
+      <div class="home-item__image-container">
+        ${thumbFile
+          ? `<img class="home-item__image" src="images/works/${work.id}/${thumbFile}" alt="${work.title.en}" loading="lazy" />`
+          : `<div class="home-item__placeholder">
+               <span class="home-item__placeholder-text">${work.title.en}</span>
+             </div>`
+        }
+      </div>
+      <div class="home-item__info" style="margin-top: 1.5rem; text-align: left;">
+        <div class="home-item__title" style="font-size: 1.25rem; font-weight: 500; margin-bottom: 0.25rem;">${work.title.en}</div>
+        ${work.title.cn ? `<div class="home-item__title-cn" style="font-size: 1.1rem; color: var(--color-text-dim); margin-bottom: 0.5rem;">${work.title.cn}</div>` : ''}
+        <div class="home-item__meta" style="font-size: 0.9rem; color: var(--color-text-dim); letter-spacing: 0.05em;">${work.year} · ${work.medium}</div>
       </div>
     </a>
   `;
