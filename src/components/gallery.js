@@ -123,7 +123,7 @@ export function renderGallery(imageItems, basePath = '/images/', options = {}) {
       wrapper.classList.add('work-gallery__item--full-res');
     }
 
-    const openFullRes = options.fullResolution || item.lightboxFullRes;
+    const openFullRes = options.fullResolution || item.lightboxFullRes || item.fullRes;
     if (openFullRes) {
       wrapper.addEventListener('click', () => {
         openLightbox(fullPaths, index, true);
