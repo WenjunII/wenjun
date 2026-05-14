@@ -236,7 +236,7 @@
 /* Description */
 .work-description {
   margin-bottom: var(--space-12);
-  max-width: 680px;
+  max-width: 720px;
 }
 
 .work-description__en {
@@ -360,7 +360,7 @@
 }
 
 /* --- Info / Biography Page --- */
-.info-page { max-width: 680px; }
+.info-page { max-width: 800px; }
 
 .info-bio {
   margin-bottom: var(--space-16);
@@ -588,7 +588,7 @@
 
 /* --- Info Page --- */
 .info-bio {
-  max-width: 800px;
+  max-width: 720px;
   line-height: 1.8;
 }
 
