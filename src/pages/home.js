@@ -18,8 +18,8 @@ export function renderHomePage(container) {
   }
 
   const hasImages = work.images && work.images.length > 0;
-  const firstImg = hasImages ? work.images[0] : null;
-  const thumbFile = firstImg ? (typeof firstImg === 'string' ? firstImg : firstImg.file) : null;
+  // Specific index image for Aliens of Me
+  const thumbFile = work.id === 'aliens-of-me' ? '5.gif' : (hasImages ? (typeof work.images[0] === 'string' ? work.images[0] : work.images[0].file) : null);
 
   let html = '';
   html += '<div class="home-grid home-grid--single">';
