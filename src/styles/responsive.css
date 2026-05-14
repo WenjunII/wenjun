@@ -47,7 +47,7 @@
   .work-header__title { font-size: var(--text-2xl); }
   .work-header__title-cn { font-size: var(--text-lg); }
 
-  .home-item { aspect-ratio: 16 / 9; }
+  .home-item { aspect-ratio: auto; }
 
   .info-entry {
     grid-template-columns: 50px 1fr;
