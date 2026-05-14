@@ -29,7 +29,7 @@ export const works = [
       ],
     },
     images: [
-      { file: '1.gif', caption: 'Web-based Animation' }, { file: '2.gif', caption: 'Web-based Animation' }, { file: '3.gif', caption: 'Web-based Animation' }, { file: '4.gif', caption: 'Web-based Animation' }, { file: '5.gif', caption: 'Video' }, { file: '6.gif', caption: 'Video' }, { file: '7.gif', caption: 'Video' }, { file: '8.gif', caption: 'Virtual Reality' }, { file: '9.gif', caption: 'Virtual Reality' }, { file: '10.gif', caption: 'WebXR' }, { file: '11.jpg', caption: 'Installation' }, { file: '12.jpg', caption: 'Installation' }, { file: '13.jpg', caption: 'Installation' }, { file: '14.jpg', caption: 'Installation' }, { file: '15.jpg', caption: 'Installation' }
+      { file: '5.gif', caption: 'Video' }, { file: '1.gif', caption: 'Web-based Animation' }, { file: '2.gif', caption: 'Web-based Animation' }, { file: '3.gif', caption: 'Web-based Animation' }, { file: '4.gif', caption: 'Web-based Animation' }, { file: '6.gif', caption: 'Video' }, { file: '7.gif', caption: 'Video' }, { file: '8.gif', caption: 'Virtual Reality' }, { file: '9.gif', caption: 'Virtual Reality' }, { file: '10.gif', caption: 'WebXR' }, { file: '11.jpg', caption: 'Installation' }, { file: '12.jpg', caption: 'Installation' }, { file: '13.jpg', caption: 'Installation' }, { file: '14.jpg', caption: 'Installation' }, { file: '15.jpg', caption: 'Installation' }
     ],
     //videos: [{ id: 'DT4h2USWL6A', title: 'Aliens of Me' }],
     links: [
